@@ -84,7 +84,7 @@ export default function HeroCarousel() {
           {/* Modern left-aligned content */}
           <div className="relative z-10 flex justify-start items-center h-full px-6 md:px-16 lg:px-24">
             <div className="max-w-3xl text-left">
-              <h1 className="text-4xl md:text-6xl font-black text-white leading-tight drop-shadow-2xl font-montserrat tracking-tight">
+              <h1 className="text-4xl md:text-6xl font-black text-white leading-tight drop-shadow-2xl font-[montserrat] tracking-tight">
                 {slides[current].title}{" "}
                 <span className="text-[#f37920]">{slides[current].highlight}</span>
               </h1>

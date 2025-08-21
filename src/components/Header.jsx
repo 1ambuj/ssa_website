@@ -157,7 +157,7 @@ export default function Header() {
                 )}
 
               </div>
-              <Link to="/about" className="hover:border-b-2 hover:border-[#F37920] transition transform hover:scale-105">About us</Link>
+              <Link to="/about" className="hover:border-b-2 hover:border-[#F37920] transition font-[Montserrat]transform hover:scale-105">About us</Link>
               <Link to="/blog" className="hover:border-b-2 hover:border-[#F37920] transition transform hover:scale-105">Blog</Link>
               <Link to="/contact" className="hover:border-b-2 hover:border-[#F37920] transition transform hover:scale-105">Contact us</Link>
             </nav>
