@@ -116,7 +116,7 @@ export default function Header() {
                 {servicesOpen && (
                 <div className="absolute left-0 mt-3 w-50 bg-white text-gray-800 shadow-lg py-2 z-50">
                 <Link 
-                  to="/services/audit-assurance" 
+                  to="/services/audit" 
                   className="block px-4 py-2 hover:bg-gray-300 hover:text-[#145886] border-l-4 border-transparent hover:border-[#F37920]"
                 >
                   Audit & Assurance
@@ -140,7 +140,7 @@ export default function Header() {
                   GST
                 </Link>
                 <Link 
-                  to="/services/non-resident" 
+                  to="/services/nri" 
                   className="block px-4 py-2 hover:bg-gray-300 hover:text-[#145886] border-l-4 border-transparent hover:border-[#F37920]"
                 >
                   Services for non-resident

@@ -7,6 +7,8 @@ import TeamMember from './pages/TeamMember'
 import './App.css'
 import Contact from './pages/Contact'
 import Blog from './pages/Blog'
+import ServiceDetail from './pages/ServiceDetail'
+import ServicesPage from './pages/ServicesPage'
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="team/:slug" element={<TeamMember />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="services" element={<ServicesPage />} />
+          <Route path="services/:slug" element={<ServiceDetail />} />
           <Route path="BLOG" element={<Blog />} />
 
         </Route>
