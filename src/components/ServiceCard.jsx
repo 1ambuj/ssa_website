@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ServiceCard = ({ icon, title, description, delay, link }) => {
   const content = (
     <div
-      className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 animate-on-scroll zoom-in"
+      className="bg-white p-8 py-12 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 animate-on-scroll zoom-in"
       style={{ animationDelay: delay }}
     >
       <div className="flex justify-center mb-5">
