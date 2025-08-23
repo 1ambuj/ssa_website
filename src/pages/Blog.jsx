@@ -6,7 +6,7 @@ import { h1 } from "framer-motion/client";
 
 export default function Blog() {
   return (
-    <h1>this is blog page</h1>
+   <h1>this is blog page</h1>
     // <div className="bg-gray-100 min-h-screen text-gray-800">
     //   <section className="pt-16 pb-8">
     //     <div className="container mx-auto px-6 max-w-7xl">

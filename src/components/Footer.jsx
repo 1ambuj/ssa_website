@@ -193,8 +193,8 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400">
           <div className="mb-3 md:mb-0">&copy; {new Date().getFullYear()} SS Partners. All rights reserved.</div>
           <div className="flex items-center space-x-6">
-            <a href="/privacy" className="hover:text-white">Privacy Policy</a>
-            <a href="/terms" className="hover:text-white">Terms & Conditions</a>
+            <a href="/privacy" className="text-white hover:text-white hover:hover:bg-emerald-600 px-3">Privacy Policy</a>
+            <a href="/terms" className="text-white hover:text-white hover:hover:bg-emerald-600 px-3">Terms & Conditions</a>
           </div>
         </div>
       </div>
