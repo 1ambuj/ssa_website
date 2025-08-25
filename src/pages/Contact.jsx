@@ -61,15 +61,17 @@ export default function Contact() {
   // --- Modern Right Side Styles ---
   const officeTitleClass =
     "font-semibold text-[#145886] mb-1 text-base flex items-center gap-2";
-  const officeAddressClass = "text-sm text-gray-700 leading-relaxed";
+  const officeAddressClass =
+    "text-sm text-gray-700 leading-relaxed";
+  // Make right section wider (from 25% to 35%)
   const rightSectionClass =
-    "w-full lg:w-[25%] flex flex-col gap-8 mt-10 lg:mt-0";
+    "w-full lg:w-[35%] flex flex-col gap-8 mt-10 lg:mt-0";
   const officeListClass =
     "flex flex-col gap-6";
   const officeItemClass =
-    "flex items-start gap-3 p-0 border-l-4 border-[#f37920] bg-white/80 hover:bg-[#f5f8fa] rounded-lg transition";
+    "flex items-start gap-3 py-6 px-3 border-l-4 border-[#f37920] bg-white/90 hover:bg-[#f5f8fa] rounded-2xl shadow-sm transition";
   const officeIconClass =
-    "w-8 h-8 flex-shrink-0 flex items-center justify-center bg-[#f37920]/10 rounded-full mt-1";
+    "w-9 h-9 flex-shrink-0 flex items-center justify-center bg-[#f37920]/10 rounded-full mt-1";
   const quickContactModernClass =
     "flex flex-col gap-4 p-0 mt-6";
   const quickContactBtnClass =
@@ -78,7 +80,7 @@ export default function Contact() {
   return (
     <div className="bg-white text-gray-800">
       {/* Contact Us Header and Description */}
-      <section className="pt-16 pb-6 bg-gray-50 ">
+      <section className="pt-16 pb-6 bg-gray-50">
         <div className="container mx-auto px-6 max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-semibold text-[#145886] mb-3 font-[Montserrat] text-left">
             Contact Us
@@ -93,8 +95,8 @@ export default function Contact() {
       {/* Contact Form and Offices Side by Side */}
       <section className="bg-white mt-10">
         <div className="container mx-auto px-6 max-w-7xl flex flex-col lg:flex-row gap-10">
-          {/* Form - 70-80% width */}
-          <div className="w-full lg:w-[75%]">
+          {/* Form - 65% width now */}
+          <div className="w-full lg:w-[82%]">
             <div className="bg-white rounded-3xl shadow border border-gray-100 py-10 px-6 md:px-10 w-full">
               <form onSubmit={handleSubmit} className="space-y-8" autoComplete="off">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -268,7 +270,7 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          {/* Offices and Quick Contact - right side column */}
+          {/* Right side card is now wider */}
           <div className={rightSectionClass}>
             <div>
               <h3 className="text-2xl font-bold text-[#145886] mb-4 font-[Montserrat] text-left tracking-tight flex items-center gap-2">
@@ -276,44 +278,78 @@ export default function Contact() {
                 Our Offices
               </h3>
               <div className={officeListClass}>
+                {/* Gurgaon Office */}
                 <div className={officeItemClass}>
                   <span className={officeIconClass}>
-                    <svg className="w-5 h-5 text-[#f37920]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" /></svg>
+                    <svg className="w-6 h-6 text-[#f37920]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" />
+                    </svg>
                   </span>
                   <div>
-                    <div className={officeTitleClass}>Head Office</div>
+                    <div className={officeTitleClass}>Gurgaon Office</div>
                     <div className={officeAddressClass}>
-                      E-127 GF, Sushant Shopping Arcade, Sushant Lok-1, Gurgaon – 122009, Haryana.
+                      <div className="text-gray-600 text-base mb-1">
+                        E-127, Ground Floor, Sushant Shopping Arcade
+                        Sushant Lok-1, Gurgaon, Haryana - 122009
+                      </div>
+                    
+                      <div className="flex flex-col gap-1 mt-2">
+                        <div className="flex items-center gap-2">
+                          <svg className="w-4 h-4 text-[#f37920]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                            <path d="M22 16.92V19a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3 5.18 2 2 0 0 1 5 3h2.09a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11l-.27.27a16 16 0 0 0 6.29 6.29l.27-.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z" />
+                          </svg>
+                          <span className="text-gray-600 font-base">+91 124-4287217</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <svg className="w-4 h-4 text-[#145886]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                            <path d="M16 2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z" />
+                          </svg>
+                          <a href="mailto:sandeep@sspartners.in" className="hover:underline text-[#145886] font-medium">
+                            sandeep@sspartners.in
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+                {/* Delhi Office */}
                 <div className={officeItemClass}>
                   <span className={officeIconClass}>
-                    <svg className="w-5 h-5 text-[#f37920]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" /></svg>
+                    <svg className="w-6 h-6 text-[#f37920]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" />
+                    </svg>
                   </span>
                   <div>
-                    <div className={officeTitleClass}>Gurgaon Branch</div>
+                    <div className={officeTitleClass}>Delhi Office</div>
                     <div className={officeAddressClass}>
-                      94R, 2nd Floor, Taj House New Colony Gurgaon-122001
-                    </div>
-                  </div>
-                </div>
-                <div className={officeItemClass}>
-                  <span className={officeIconClass}>
-                    <svg className="w-5 h-5 text-[#f37920]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" /></svg>
-                  </span>
-                  <div>
-                    <div className={officeTitleClass}>Delhi Branch</div>
-                    <div className={officeAddressClass}>
-                      803, Best Sky Tower, Netaji Subhash Palace, New Delhi-110030
+                      <div className="font-base text-gray-600 text-base mb-1">
+                        V-8, Green Park Extension
+                        New Delhi - 110016
+                      </div>
+                      
+                      <div className="flex flex-col gap-1 mt-2">
+                        <div className="flex items-center gap-2">
+                          <svg className="w-4 h-4 text-[#f37920]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                            <path d="M22 16.92V19a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3 5.18 2 2 0 0 1 5 3h2.09a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11l-.27.27a16 16 0 0 0 6.29 6.29l.27-.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z" />
+                          </svg>
+                          <span className="text-gray-600 font-base">+91 9211551857</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <svg className="w-4 h-4 text-[#145886]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                            <path d="M16 2H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z" />
+                          </svg>
+                          <a href="mailto:ca.shalini.sgupta@gmail.com" className="hover:underline text-[#145886] font-medium">
+                            ca.shalini.sgupta@gmail.com
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            {/* Modern Quick Contact - only show on desktop */}
             <div className="hidden lg:block">
-              <div className="bg-white/80 rounded-xl border border-gray-100 shadow p-6 flex flex-col gap-4 mt-4">
+              <div className="bg-white/80 rounded-xl border border-gray-100 shadow p-6 flex flex-col gap-4 ">
                 <h4 className="text-lg font-semibold text-[#145886] mb-2 font-[Montserrat] text-left flex items-center gap-2">
                   <svg className="w-5 h-5 text-[#f37920]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7.5" /></svg>
                   Quick Contact
@@ -336,7 +372,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Map Section - at the bottom */}
       <section className="mt-10 mb-16">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
