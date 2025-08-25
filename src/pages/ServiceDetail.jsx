@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import services from "../data/services";
 import placeholder from "../assets/download.png";
+import blogPosts from "../data/blogPosts";
+import BlogList from "../components/BlogList";
 
 const AccordionItem = ({ item }) => {
   const [open, setOpen] = useState(false);
@@ -136,6 +138,34 @@ const ServiceDetail = () => {
             </div>
           </div>
         )}
+
+        {/* Related blog posts */}
+        <div className="mt-12">
+          <div className="container mx-auto px-6">
+            <h3 className="text-2xl font-bold text-[#145886] mb-4">Related Blogs</h3>
+            <p className="text-gray-600 mb-6">Articles related to {service.title} and similar topics.</p>
+
+            {/* Find posts where category matches service slug or title keywords */}
+            {(() => {
+              const slugMatches = blogPosts.filter((p) => p.category && p.category.toLowerCase().includes(service.slug));
+              const titleMatches = blogPosts.filter((p) => {
+                const text = (p.title + " " + p.excerpt + " " + (p.category || "")).toLowerCase();
+                return service.title.toLowerCase().split(/\s+/).some((w) => w.length > 3 && text.includes(w));
+              });
+
+              const combined = [...slugMatches, ...titleMatches];
+              // unique by slug
+              const unique = Array.from(new Map(combined.map((p) => [p.slug, p])).values());
+              const toShow = unique.slice(0, 3);
+
+              if (toShow.length === 0) {
+                return <div className="text-gray-500">No related posts found.</div>;
+              }
+
+              return <BlogList posts={toShow} />;
+            })()}
+          </div>
+        </div>
       </div>
     </section>
   );

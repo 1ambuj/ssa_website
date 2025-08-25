@@ -27,6 +27,42 @@ const blogPosts = [
     category: "Advisory Services",
     image: "/src/assets/approch.jpeg",
   },
+  {
+    slug: "direct-taxation-overview",
+    title: "Understanding Direct Taxation in India",
+    excerpt:
+      "Direct taxes are levied directly on individuals and organizations. This article explores the key aspects, compliance requirements, and recent updates in direct taxation.",
+    date: "2023-05-15",
+    category: "Direct Taxation",
+    image: "/src/assets/approch.jpeg",
+  },
+  {
+    slug: "indirect-taxation-basics",
+    title: "Basics of Indirect Taxation",
+    excerpt:
+      "Indirect taxes such as GST and customs duties impact businesses and consumers alike. Learn about the structure, compliance, and implications of indirect taxation in India.",
+    date: "2023-06-10",
+    category: "Indirect Taxation",
+    image: "/src/assets/approch.jpeg",
+  },
+  {
+    slug: "non-advisory-services",
+    title: "Non-Advisory Services: What We Offer",
+    excerpt:
+      "Beyond advisory, our firm provides a range of non-advisory services including audit, assurance, and compliance support. Discover how we can help your business stay compliant.",
+    date: "2023-07-20",
+    category: "Non-Advisory",
+    image: "/src/assets/approch.jpeg",
+  },
+  {
+    slug: "audit-assurance-updates",
+    title: "Recent Updates in Audit & Assurance",
+    excerpt:
+      "Stay up to date with the latest changes and best practices in audit and assurance services. This post covers regulatory updates and practical insights for businesses.",
+    date: "2023-08-05",
+    category: "Audit & Assurance",
+    image: "/src/assets/approch.jpeg",
+  },
 ];
 
 export default blogPosts;
